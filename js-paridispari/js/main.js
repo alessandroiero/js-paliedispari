@@ -9,6 +9,7 @@ Dichiariamo chi ha vinto. */
 
 // ------ FUNZIONI ------
 // Funzione numero random
+//dichiaro una funzione random che ci servirà in caso di numeri random
 function numeroRandom(min, max) {
     let random = Math.floor(Math.random() * (max - min + 1) + min);
     return random;
@@ -26,17 +27,17 @@ function pariDispari(par1, par2) {
 // ------ FUNZIONI ------
 
 
-//dichiaro variabili prompt che sono le scelte dell'utente se il numero è pari o dispari e il numero stesso da inserire < di 5
+//dichiaro variabili prompt che saranno le varie scelte dell'utente se il numero è pari o dispari e il numero stesso da inserire < di 5
 const sceltaUtente = prompt('pari o dispari');
 const sceltaNumero = Number(prompt('inserisci un numero da 1 a 5'))
-//dichiaro una funzione random che ci servirà in caso di numeri random
 console.log(`Il numero scelto è ${sceltaNumero}`);
+
 //numero randomico generato dal computer
 let computerNumber = numeroRandom(1, 5);
 console.log(`Il numero scelto dal pc randomicamente è ${computerNumber}`);
 
 // Valutiamo chi vince
-// Creiamo una nuova variabile dove inseriamo la funzione pari e dispari con all'interno come parametri le due variabili
+// Creiamo una nuova variabile dove inseriremo la funzione pari e dispari con all'interno come parametri le due variabili
 let pariVsDispari = pariDispari(computerNumber, sceltaNumero);
 console.log(`La somma è ${pariVsDispari}, tu hai selezionanto ${sceltaUtente}`);
 
